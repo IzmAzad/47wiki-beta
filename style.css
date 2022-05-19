@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;500;700&family=Radio+Canada&family=Roboto&family=Ubuntu&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*::before,
+* :after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+body {
+  /* min-width: 1400px; */
+  /* ограничиваем ширину чтобы ниже этой ширины контент не жемался */
+  /* Фиксированная верстка */
+}
+.wraper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* media запросы или брейк-поинты при достижении определенной ширины 992 срабатывет брейк-поинт и ширина становиться на уровне 750 которое написано ниже */
+@media (max-width: 1400px) {
+  .container {
+    max-width: 970px;
+    /* маленький манитор */
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+    /* контент на планшетах 992 */
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    max-width: none;
+  }
+}
+
+.content {
+}
+.head {
+  background-color: black;
+  min-width: 1500px;
+  /* указываем значение min-width для того чтобы эта ширина была минимальной и уменьшить ее нельзя было */
+  background-size: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  /* max-width: 1200px; */
+}
+.head__row {
+  display: flex;
+  justify-content: space-between;
+}
+.body {
+}
+.head__image {
+  margin-right: 200px;
+}
+.head__list a {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  color: aliceblue;
+  font-size: 20px;
+}
+.head__image,
+.head__list li {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 105px;
+  /* обращение к двум тегам одновременно */
+}
+.head__list {
+  display: inline-block;
+  height: 80px;
+}
+.head__list li {
+  color: aliceblue;
+  font-size: 20px;
+}
+.head__list li:hover {
+  color: gold;
+}
+.head__list a:hover {
+  color: gold;
+}
+.school {
+  background-color: white;
+}
+.school__row {
+  display: flex;
+  justify-content: space-between;
+}
+.school__img {
+  padding: left 110px;
+  text-align: left;
+}
+.school__body {
+}
+.school__text p {
+  font-size: 25px;
+  padding-left: 30px;
+  padding-top: 30px;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 22px;
+  min-width: 555px;
+  background-color: white;
+  /* text-align: center; */
+}
+.info {
+  background-color: ghostwhite;
+}
+.info__row {
+}
+.info__title {
+  text-align: center;
+  font-size: 34px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-family: "Ubuntu", sans-serif;
+}
+.info__text {
+  font-size: 34px;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 40px;
+  min-width: 1212px;
+}
+.columns {
+  background-color: black;
+  min-width: 1500px;
+}
+.columns__title {
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+.columns__body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.columns__row {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex container со всеми (колонками) элементами */
+}
+.colum {
+  display: flex;
+  padding: 0 22px;
+  flex-wrap: wrap;
+  padding-top: 29px;
+  /* flex container с вопросами */
+}
+.colum__item {
+  display: flex;
+  flex-direction: column;
+  background-color: #445162;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #445162;
+  padding: 0 0 20px 0;
+}
+.colum__title {
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 12px 0;
+}
+.colum__image img {
+  max-width: 400px;
+}
+.colum__text {
+  padding: 20px;
+  line-height: 24px;
+  font-size: 14px;
+  flex: 1 1 auto;
+}
+.colum__bottom {
+  display: block;
+  margin: 0 20px;
+  height: 40px;
+  line-height: 20px;
+  text-align: center;
+  background-color: black;
+  color: gold;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.colum__bottom a {
+  color: gold;
+  text-align: center;
+}
